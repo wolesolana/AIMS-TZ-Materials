@@ -1,0 +1,190 @@
+\documentclass[10pt,t,sans,mathsans,xcolor=dvipsnames]{beamer}
+
+\usetheme{Antibes}
+\usecolortheme{structure}
+%\usepackage[utf8x]{inputenc}
+%\usepackage{default}
+%\usecolortheme{albatross}
+%\usecolortheme{lily}
+%\usecolortheme{sidebartab}
+%\usecolortheme{crane}
+%\usecolortheme{orchid}
+%\usecolortheme{albatross}
+%\usecolortheme{beetle}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{seagull}
+%\usecolortheme{dolphin}
+%\usecolortheme{rose}
+\usepackage{graphics}
+%\usepackage[pdftex]{graphicx}
+%\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{color}
+%\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[obeyspaces]{url}
+\usepackage{amssymb,amsmath} % for the bold symbol command
+\usepackage{booktabs} % toprule etc in tables
+\usepackage{mathrsfs}
+\usepackage{listings}
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{green},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  frame=single,
+  keywordstyle=\color{blue},
+  language=bash,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{gray},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=2,
+  stringstyle=\color{red},
+  tabsize=2,
+  title=\lstname,
+  morekeywords={not,\},\{,preconditions,effects },
+  deletekeywords={time}
+}
+%\usepackage{minted}
+%\usepackage{beamerthemebars}
+%\usepackage{ragged2e}
+%\usepackage{lipsum}
+
+\setbeamercolor{structure}{fg=OliveGreen!50!black}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+
+\title{ Introduction to version control with Git }
+
+\author{ Brain Leke Betetchouh \& 'Wole Solana }
+\begin{document}
+\frame [c, plain]{\titlepage}
+%-------------------------------Slide1----------------------------------------------------------------------------------------
+\section{Introduction}
+\begin{frame}
+\frametitle{What is Git?}
+\end{frame}
+%------------------------------Slide2-------------------------------------------------------------------------------------------
+\section{The Basics}
+\begin{frame}[fragile]
+\frametitle{Setup}
+\begin{itemize}
+\item Installing Git
+\begin{lstlisting}
+apt-get install git
+\end{lstlisting}
+\item Configuring your settings
+\begin{lstlisting}
+git config --global user.name "Your Name"
+git config --global user.email your@emailaddress.com
+\end{lstlisting}
+\item Initializing a local repo
+\begin{lstlisting}
+git init
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+%------------------------------Slide3-----------------------------------
+\subsubsection*{Tracking Changes}
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Tracking changes}
+\begin{itemize}
+\item Checking the status of your repo
+\begin{lstlisting}
+git status
+\end{lstlisting}
+\item Undoing changes to files
+\begin{itemize}
+\item Single file:
+\begin{lstlisting}
+git checkout filename
+\end{lstlisting}
+\item Multiple files:
+\begin{lstlisting}
+git checkout .
+\end{lstlisting}
+\end{itemize}
+\item Staging and Unstaging files
+\begin{itemize}
+\item Single file:
+\begin{lstlisting}
+git add filename
+\end{lstlisting}
+\item Multiple files:
+\begin{lstlisting}
+git add .
+\end{lstlisting}
+\end{itemize}
+\item Committing your files
+\begin{itemize}
+\item Single file:
+\begin{lstlisting}
+git commit filename
+\end{lstlisting}
+\item Multiple files:
+\begin{lstlisting}
+git commit .
+\end{lstlisting}
+\end{itemize}
+\item Ignoring files
+\begin{itemize}
+\item Create a file `\texttt{.gitignore}` and add the filenames (or file patterns) you wish to ignore
+\end{itemize}
+\item Amending a commit
+\begin{lstlisting}
+git commit --amend
+\end{lstlisting}
+\item Commit History
+\begin{lstlisting}
+git log
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+%---------------------------------------------Slide4------------------------------------------------------------
+\section{Working with remote repositories}
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Remote repositories}
+\begin{itemize}
+\item Initializing from a remote repo
+\begin{lstlisting}
+git clone [remote_url]
+\end{lstlisting}
+\item Setting up a repo on GitHub, BitBucket, etc.
+\item Adding a remote repo manually
+\begin{lstlisting}
+git remote add [remote_url]
+\end{lstlisting}
+\item Pulling from a remote
+\begin{lstlisting}
+git fetch [remote_name]
+git pull [remote_name]
+\end{lstlisting}
+\item Pushing your work
+\begin{lstlisting}
+git push [remote_name]
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+%---------------------------------------------Slide5----------------------------------------------------------------
+\section{Just gitting started...}
+\begin{frame}[fragile]%[allowframebreaks]
+\frametitle{Just gitting started}
+\begin{itemize}
+\item Branching
+\item Merging and merge conflicts
+\item Working with multiple remotes
+\end{itemize}
+\end{frame}
+%---------------------------------------------Slide6------------------------------------------------------------------
+\begin{frame}
+\frametitle{Questions and Exercises}
+\end{frame}
+\end{document}
