@@ -162,9 +162,9 @@ git log
 \end{frame}
 %---------------------------------------------Slide4------------------------------------------------------------
 \section{Working with remote repositories}
-\begin{frame}[fragile, allowframebreaks]
+\begin{frame}[fragile]
 \frametitle{Remote repositories}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Initializing from a remote repo
 \begin{lstlisting}
 git clone [remote_url]
@@ -172,7 +172,7 @@ git clone [remote_url]
 \item Setting up a repo on GitHub, BitBucket, etc.
 \item Adding a remote repo manually
 \begin{lstlisting}
-git remote add [remote_url]
+git remote add [remote_name] [remote_url]
 \end{lstlisting}
 \item Pulling from a remote
 \begin{lstlisting}
