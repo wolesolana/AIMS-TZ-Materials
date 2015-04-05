@@ -17,8 +17,8 @@
 %\usecolortheme{dolphin}
 %\usecolortheme{rose}
 \usepackage{graphics}
-%\usepackage[pdftex]{graphicx}
-%\usepackage{graphicx}
+% \usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{color}
 %\usepackage{url}
@@ -61,8 +61,10 @@
 
 \setbeamercolor{structure}{fg=OliveGreen!50!black}
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\logo{\includegraphics[scale=0.05]{../../../TWAssets/TW_Colour_Logos_trans_earth.png}}
 
 \title{ Development Practices }
+\titlegraphic{\includegraphics[scale=0.15]{../../../TWAssets/TW_Colour_Logos_trans_earth.png}}
 
 \author{ Brain Leke Betetchouh \& 'Wole Solana }
 \begin{document}
@@ -71,6 +73,7 @@
 \section{Introduction}
 \begin{frame}
 \frametitle{Some software development practices}
+\pause
 \begin{itemize}[<+->]
 \item Object Oriented Programming (OOP)
 \item Test Driven Development (TDD)
@@ -80,15 +83,18 @@
 \section{Object Oriented Programming}
 \begin{frame}[fragile]
 \frametitle{Object Oriented Programming}
+\pause
 \begin{itemize}[<+->]
-\item
+\item OOP is a design approach that allows integration of code and data using the concept of an \alert{object}
+\item An \alert{object} is a structure that contains \textit{both} data (attributes) and behaviour (methods).
 \end{itemize}
 \end{frame}
 %------------------------------Slide3----------------------------------
 \section{Test Driven Development}
 \begin{frame}[fragile]
 \frametitle{Test Driven Development}
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 \item TDD is an \alert{iterative} process in which we \alert{incrementally} add functionality to our code by \alert{writing tests first} before any production code.
 \end{itemize}
 \end{frame}
