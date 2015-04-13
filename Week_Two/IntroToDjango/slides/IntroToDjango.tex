@@ -86,7 +86,7 @@
 \column{0.5\textwidth}
 \begin{figure}
 \centering
-\includegraphics[scale=0.3]{../images/django.jpg} 
+\includegraphics[scale=0.3]{../images/django.jpg}
 \end{figure}
 \end{columns}
 \end{frame}
@@ -125,16 +125,114 @@
 \begin{figure}
 \hspace*{-0.5cm}
 \centering
-\includegraphics[scale=0.4]{../images/mvc-02.jpg} 
+\includegraphics[scale=0.4]{../images/mvc-02.jpg}
 \caption{The MVC pattern}
 \end{figure}
 \end{columns}
 \end{frame}
 %--------------------------------------------Slide7------------------------------------------------------------------
-\section{Further Reading}
-\begin{frame}
-\frametitle{Further Reading}
-% \bibliographystyle{plain}
-% \bibliography{DevelopmentPractices.bib}
+\section{Our first Django app}
+\begin{frame}[fragile]
+\frametitle{Installation and set up}
+\begin{itemize}[<+->]
+\item Setup your virtual environment
+\begin{lstlisting}
+virtualenv django_env
+\end{lstlisting}
+\item Activate your virtual environment
+\begin{lstlisting}
+source django_env/bin/activate
+\end{lstlisting}
+\item Install django
+\begin{lstlisting}
+pip install django
+\end{lstlisting}
+\item Start your project
+\begin{lstlisting}
+django-admin startproject firstsite
+\end{lstlisting}
+\end{itemize}
 \end{frame}
+%--------------------------------------------Slide8------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Let's take a look at our app}
+\begin{itemize}[<+->]
+\item Setup the database. Go into the \texttt{firstsite} folder and run
+\begin{lstlisting}
+python manage.py migrate
+\end{lstlisting}
+\item Run the server
+\begin{lstlisting}
+python manage.py runserver &
+\end{lstlisting}
+\item In your browser, navigate to \texttt{http://127.0.0.1:8000/}, and \textit{voila!}
+\end{itemize}
+\end{frame}
+%--------------------------------------------Slide9------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Let's add some content}
+\begin{itemize}[<+->]
+\item Still in the \texttt{firstsite} folder, run
+\begin{lstlisting}
+python manage.py startapp my_library
+\end{lstlisting}
+\item Open the \texttt{settings.py} file and in the file, add `\texttt{my\_library}' to the \texttt{INSTALLED\_APPS} list so you have something like this:
+\begin{verbatim}
+INSTALLED_APPS = (
+    `django.contrib.admin',
+    `django.contrib.auth',
+    `django.contrib.contenttypes',
+    `django.contrib.sessions',
+    `django.contrib.messages',
+    `django.contrib.staticfiles',
+    `my_library',
+)
+\end{verbatim}
+\end{itemize}
+\end{frame}
+%--------------------------------------------Slide10------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Creating the book model}
+\begin{itemize}[<+->]
+\item Open \texttt{my\_library/models.py}
+\item Edit the file (we'll do this together) with the model attributes
+\item Update the database
+\begin{lstlisting}
+python manage.py makemigrations my_library
+python manage.py migrate my_library
+\end{lstlisting}
+\item Open the \texttt{my\_library/admin.py} file. Update it with the following content:
+\begin{verbatim}
+from django.contrib import admin
+from my_library.models import Book
+admin.site.register(Book)
+\end{verbatim}
+\item In your browser, visit `\texttt{http://127.0.0.1:8000/admin}'
+\end{itemize}
+\end{frame}
+%--------------------------------------------Slide11------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Some admin}
+\begin{itemize}[<+->]
+\item Create a superuser
+\begin{lstlisting}
+python manage.py createsuoeruser
+python manage.py migrate my_library
+\end{lstlisting}
+\item Go back to `\texttt{http://127.0.0.1:8000/admin}', log in and create some books
+\end{itemize}
+\end{frame}
+%--------------------------------------------Slide12------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{So how do we get to see our view?}
+%\begin{itemize}[<+->]
+%\end{itemize}
+\end{frame}
+%--------------------------------------------Slide13------------------------------------------------------------------
+%\section{Further Reading}
+%\begin{frame}
+%\frametitle{Further Reading}
+%% \bibliographystyle{plain}
+%% \bibliography{DevelopmentPractices.bib}
+%\end{frame}
 \end{document}
