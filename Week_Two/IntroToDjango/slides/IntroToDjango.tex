@@ -63,7 +63,7 @@
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 \logo{\includegraphics[scale=0.05]{../../../TWAssets/TW_Colour_Logos_trans_green.png}}
 
-\title{ Introduction to Web Application Development }
+\title{ An Introduction to Django }
 \titlegraphic{\includegraphics[scale=0.15]{../../../TWAssets/TW_Colour_Logos_trans_green.png}}
 
 \author{ Patrick Turley \& 'Wole Solana }
@@ -73,38 +73,64 @@
 %-------------------------------Slide1-------------------------------
 \section{Introduction}
 \begin{frame}
-\frametitle{What is a Web Application?}
+\frametitle{What is Django?}
 \pause
+\begin{columns}[l]
+\column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item 1
-\item 2
+\item \alert{Django} is an open source web application (web app) framework written in Python, and follows the \alert{Model-View-Controller} (MVC) design pattern.
+\item A \alert{web framework} can be loosely defined as a set of components that assist in building web apps faster and easier.
+\item Other frameworks include Rails (Ruby), Drupal (PHP) and Spring (Java)
+\item Popular sites built with Django include NASA, Instagram, The Guardian.
 \end{itemize}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{../images/django.jpg} 
+\end{figure}
+\end{columns}
 \end{frame}
 %------------------------------Slide2---------------------------------
-\section{Types of Web Frameworks}
 \begin{frame}[fragile]
-\frametitle{Web Frameworks}
+\frametitle{Why use a web framework?}
 \pause
+\begin{columns}[l]
+\column{0.5\textwidth}
+\vspace{-1cm}
+\begin{figure}
+\centering
+\includegraphics[scale=0.125]{../images/webapp_building_blocks.png}
+\caption{\footnotesize{Schematic diagram of a web app}}
+\end{figure}
+\column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item 1
-\item 2
-\item 3
+\item It enables us to build web apps faster by focusing on the unique functionality of our web app rather than the infrastucture
+\item Most provide us with with libraries and templates which we can reuse, thus enhancing our productivity.
 \end{itemize}
+\end{columns}
 \end{frame}
 %------------------------------Slide3----------------------------------
 \section{The MVC design paradigm}
 \begin{frame}[fragile]
 \frametitle{Model-View-Controller}
 \pause
+\begin{columns}[l]
+\column{0.4\textwidth}
 \begin{itemize}[<+->]
-\item 1
-% \begin{figure}
-% \centering
-% \includegraphics[scale=0.4]{../images/tdd-red-green-refactor-diagram.png}
-% \end{figure}
+\item A design pattern (which extends OOP) that helps us better organise our web app by \alert{separating concerns}
+\item The \textbf{model} contains \alert{data and logic}, the \textbf{view} forms the \alert{user interface} (what the user sees and the \textbf{controller} manages the \alert{interaction} between the model and view.
 \end{itemize}
+\column{0.5\textwidth}
+\vspace{-0.5cm}
+\begin{figure}
+\hspace*{-0.5cm}
+\centering
+\includegraphics[scale=0.4]{../images/mvc-02.jpg} 
+\caption{The MVC pattern}
+\end{figure}
+\end{columns}
 \end{frame}
-%---------------------------------------------Slide7------------------------------------------------------------------
+%--------------------------------------------Slide7------------------------------------------------------------------
 \section{Further Reading}
 \begin{frame}
 \frametitle{Further Reading}
