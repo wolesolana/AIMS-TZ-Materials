@@ -59,7 +59,7 @@
 %\usepackage{ragged2e}
 %\usepackage{lipsum}
 
-\setbeamercolor{structure}{fg=RawSienna!50!black}
+\setbeamercolor{structure}{fg=MidnightBlue!50!black}
 \renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 \logo{\includegraphics[scale=0.05]{../../../TWAssets/TW_Colour_Logos_trans_green.png}}
 
@@ -96,7 +96,7 @@
 \centering
 In Django \textbf{MVC} == \textbf{\alert{MVT}}
 \begin{table}
-\bigger
+\large
 \centering
 \begin{tabular}{|l|c|}\hline
 \textbf{General}  &\textbf{Django}\\ \hline\hline
@@ -107,8 +107,6 @@ View&Template\\ \hline
 \caption{\footnotesize MVC mapping in Django.}
 \end{table}
 \end{frame}
-
-
 %------------------------------Slide3----------------------------------
 \section{HTTP Verbs}
 \begin{frame}
@@ -121,7 +119,7 @@ View&Template\\ \hline
 \item DELETE
 \end{itemize}
 \end{frame}
-%------------------------------Slide3----------------------------------
+%------------------------------Slide4----------------------------------
 
 \section{REST principles}
 \begin{frame}[fragile]
@@ -136,21 +134,20 @@ View&Template\\ \hline
 \begin{table}
 \scriptsize
 \centering
-\begin{tabular}{|l|l|l|l|}\hline
-Action  &URL&  Verb \\ \hline\hline
-Index&/books&GET\\
-Show&/books/1&GET\\
-New&/books/new&GET\\
-Create&/books&POST\\
-Edit&/books/1/edit&GET\\
-Update&/books/1&PUT\\
-Destroy&/books/1&DELETE\\ \hline
+\begin{tabular}{|l|l|l|l|l|}\hline
+Action  &URL&                  Verb  & What this does\\ \hline\hline
+Index&  \texttt{/books}&       GET & show me all the books in the database\\ \hline
+Show&   \texttt{/books/1}&     GET & show me a \textit{\alert{particular}} book in the database\\ \hline
+New&    \texttt{/books/new}&   GET & start creating a new book\\ \hline
+Create& \texttt{/books}&       POST & add a new book to the database\\ \hline
+Edit&   \texttt{/books/1/edit}&GET & start making changes \textit{\alert{particular}} book \\ \hline
+Update& \texttt{/books/1}&     PUT & save changes to a \textit{\alert{particular}} book in the database\\ \hline
+Destroy&\texttt{/books/1}&     DELETE & delete a book from the database\\ \hline
 \end{tabular}
 \caption{\footnotesize Mapping REST actions to URLS and verbs.}
 \end{table}
-
 \end{frame}
-%--------------------------------------------Slide7------------------------------------------------------------------
+%--------------------------------------------Slide5------------------------------------------------------------------
 \section{Implementing RESTful principles in Django}
 \begin{frame}[fragile]
 \frametitle{Making our library RESTful}
@@ -159,46 +156,46 @@ Destroy&/books/1&DELETE\\ \hline
 \scriptsize
 \centering
 \begin{tabular}{|l|l|l|l|l|}\hline
-Action  &URL&  Verb & Django URL\\ \hline\hline
-Index&/books&GET & /books\\
-Show&/books/1&GET & /books/1\\
-New&/books/new&GET & /books/new\\
-Create&/books&POST & /books/create \\
-Edit&/books/1/edit&GET & /books/1/edit\\
-Update&/books/1&PUT & /books/1/update\\
-Destroy&/books/1&DELETE & /books/1/destroy\\ \hline
+\textbf{Action}  &\textbf{URL}&  \textbf{Verb} & \textbf{Django URL} \\ \hline\hline
+Index&    \texttt{/books}&         GET &     \texttt{/books}\\
+Show&     \texttt{/books/1}&       GET &     \texttt{/books/1}\\
+New&      \texttt{/books/new}&     GET &     \texttt{/books/new}\\
+Create&   \texttt{/books}&         POST &    \texttt{/books/create} \\
+Edit&     \texttt{/books/1/edit}&  GET &     \texttt{/books/1/edit}\\
+Update&   \texttt{/books/1}&       PUT &     \texttt{/books/1/update}\\
+Destroy&  \texttt{/books/1}&       DELETE &  \texttt{/books/1/destroy}\\ \hline
 \end{tabular}
 \caption{\footnotesize Mapping REST actions to URLS and verbs.}
 \end{table}
 
 \end{frame}
-%--------------------------------------------Slide8------------------------------------------------------------------
+%--------------------------------------------Slide6------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Let's take a look at our app}
 
 \end{frame}
-%--------------------------------------------Slide9------------------------------------------------------------------
+%--------------------------------------------Slide7------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Let's add some content}
 
 \end{frame}
-%--------------------------------------------Slide10------------------------------------------------------------------
+%--------------------------------------------Slide8------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Creating the book model}
 
 \end{frame}
-%--------------------------------------------Slide11------------------------------------------------------------------
+%--------------------------------------------Slide9------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Some admin}
 
 \end{frame}
-%--------------------------------------------Slide12------------------------------------------------------------------
+%--------------------------------------------Slide10------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{So how do we get to see our view?}
 %\begin{itemize}[<+->]
 %\end{itemize}
 \end{frame}
-%--------------------------------------------Slide13------------------------------------------------------------------
+%--------------------------------------------Slide11------------------------------------------------------------------
 %\section{Further Reading}
 %\begin{frame}
 %\frametitle{Further Reading}
