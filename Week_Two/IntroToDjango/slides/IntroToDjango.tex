@@ -118,7 +118,7 @@
 \column{0.4\textwidth}
 \begin{itemize}[<+->]
 \item A design pattern (which extends OOP) that helps us better organise our web app by \alert{separating concerns}
-\item The \textbf{model} contains \alert{data and logic}, the \textbf{view} forms the \alert{user interface} (what the user sees and the \textbf{controller} manages the \alert{interaction} between the model and view.
+\item The \textbf{model} contains \alert{data and logic}, the \textbf{view} forms the \alert{user interface} (what the user sees) and the \textbf{controller} manages the \alert{interaction} between the model and view.
 \end{itemize}
 \column{0.5\textwidth}
 \vspace{-0.5cm}
@@ -149,7 +149,7 @@ pip install django
 \end{lstlisting}
 \item Start your project
 \begin{lstlisting}
-django-admin startproject firstsite
+django-admin startproject first_site
 \end{lstlisting}
 \end{itemize}
 \end{frame}
@@ -216,7 +216,7 @@ admin.site.register(Book)
 \begin{itemize}[<+->]
 \item Create a superuser
 \begin{lstlisting}
-python manage.py createsuoeruser
+python manage.py createsuperuser
 python manage.py migrate my_library
 \end{lstlisting}
 \item Go back to `\texttt{http://127.0.0.1:8000/admin}', log in and create some books
