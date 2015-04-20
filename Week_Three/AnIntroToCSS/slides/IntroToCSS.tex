@@ -110,8 +110,12 @@ There are quite a number of CSS frameworks online that you can add to your proje
 \begin{itemize}[<+->]
 \item Create a \texttt{``static''} folder.
 \item In it, place the folders from whatever CSS framework you have decided to use so your file structure looks something like the diagram on the right.
-\item Import the file path(s) into your HTML \texttt{header} and \texttt{script} blocks.
+\item Import the file path(s) into your HTML \texttt{header} and \texttt{script} blocks and add the line to your html views:
+\begin{lstlisting}
+{% load staticfiles %}.
+\end{lstlisting}
 \end{itemize}
+\pause
 \column{0.5\textwidth}
 \begin{lstlisting}
 -- static
