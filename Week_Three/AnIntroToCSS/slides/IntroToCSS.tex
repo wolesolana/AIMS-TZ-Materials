@@ -1,0 +1,147 @@
+\documentclass[10pt,t,xcolor=dvipsnames]{beamer}
+
+\usetheme{Antibes}
+\usecolortheme{structure}
+%\usepackage[utf8x]{inputenc}
+%\usepackage{default}
+%\usecolortheme{albatross}
+%\usecolortheme{lily}
+%\usecolortheme{sidebartab}
+%\usecolortheme{crane}
+%\usecolortheme{orchid}
+%\usecolortheme{albatross}
+%\usecolortheme{beetle}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{seagull}
+%\usecolortheme{dolphin}
+%\usecolortheme{rose}
+\usepackage{graphics}
+% \usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{color}
+%\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[obeyspaces]{url}
+\usepackage{amssymb,amsmath} % for the bold symbol command
+\usepackage{booktabs} % toprule etc in tables
+\usepackage{mathrsfs}
+\usepackage{listings}
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{green},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  frame=single,
+  keywordstyle=\color{blue},
+  language=bash,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{gray},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=2,
+  stringstyle=\color{red},
+  tabsize=2,
+  title=\lstname,
+  morekeywords={not,\},\{,preconditions,effects },
+  deletekeywords={time}
+}
+%\usepackage{minted}
+%\usepackage{beamerthemebars}
+%\usepackage{ragged2e}
+%\usepackage{lipsum}
+
+\setbeamercolor{structure}{fg=Plum!50!black}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\logo{\includegraphics[scale=0.05]{../../../TWAssets/TW_Colour_Logos_trans_black.png}
+      \includegraphics[scale=0.05]{../../../TWAssets/aimsgh-vertical2.png}
+      }
+
+\title{ An Introduction to CSS }
+\titlegraphic{\includegraphics[scale=0.15]{../../../TWAssets/TW_Colour_Logos_trans_black.png}
+              \includegraphics[scale=0.15]{../../../TWAssets/aimsgh-vertical2.png}
+              }
+
+\author{ Faris Mohammed \& 'Wole Solana }
+\begin{document}
+\nocite*{}
+\frame [c, plain]{\titlepage}
+%-------------------------------Slide1-------------------------------
+\section{Making things pretty}
+\begin{frame}
+\frametitle{What is CSS?}
+\pause
+\begin{itemize}[<+->]
+\item \alert{C}ascading \alert{S}tyle \alert{S}heets is a programming language used to modify the how the design of a web page written in HTML looks and is formatted. It is the \textit{``prettifier''} of our webpages.
+\item You can write your own CSS file, describing how you want the different HT§ML elements on your page to look like or...
+\item You can use some CSS frameworks which are readily available online and add it to your project.
+\item You can then add some custom design and formatting as required.
+\item \alert{Beware} with ``overcustomization'' of frameworks imported into your project. Customization should be done sparingly.
+\end{itemize}
+\end{frame}
+%------------------------------Slide2----------------------------------
+\section{Available CSS tools}
+\begin{frame}[fragile]
+\frametitle{Some CSS frameworks}
+\pause
+There are quite a number of CSS frameworks online that you can add to your project. Some of these include:
+\begin{itemize}[<+->]
+\item Bootstrap CSS: \texttt{\href{bootstrap_link}{http://getbootstrap.com/}}
+\item Zurb: \texttt{\href{zurb_link}{http://foundation.zurb.com/}}
+\item Kube: \texttt{\href{kube_link}{http://imperavi.com/kube/}}
+\item Pure CSS: \texttt{\href{pure_link}{http://purecss.io/}}
+\item You can search online for other frameworks and how to add them to your app
+\end{itemize}
+\end{frame}
+%------------------------------Slide3---------------------------------
+\begin{frame}[fragile]
+\frametitle{Adding CSS to your project}
+\pause
+\begin{columns}[l]
+\column{0.5\textwidth}
+\begin{itemize}[<+->]
+\item Create a \texttt{``static''} folder.
+\item In it, place the folders from whatever CSS framework you have decided to use so your file structure looks something like the diagram on the right.
+\item Import the file path(s) into your HTML \texttt{header} and \texttt{script} blocks.
+\end{itemize}
+\column{0.5\textwidth}
+\begin{lstlisting}
+-- static
+│  -- css
+│  -- img
+│  -- js
+\end{lstlisting}
+\end{columns}
+\end{frame}
+%--------------------------------------------Slide7------------------------------------------------------------------
+\section{A word on Javascript}
+\begin{frame}[fragile]
+\frametitle{Why Javascript?}
+\begin{itemize}[<+->]
+\item \textit{\alert{Javascript}} (not \textit{\alert{Java}}) is a dynamic programming language, and is commonly used in web browsers for client side scripting of user interactions.
+\item There are other implementations of javascript that are widely used in creating web apps including
+\begin{itemize}
+\item Angular (\texttt{\href{angular_link}{https://angularjs.org/}}),
+\item Ember (\texttt{\href{ember_link}{http://emberjs.com/}}),
+\item Knockout (\texttt{\href{knockout_link}{http://knockoutjs.com/}}), and
+\item Backbone (\texttt{\href{backbone_link}{http://backbonejs.org/}}) JS.
+\end{itemize}
+\item Javascript is also used for some server side applications. NodeJS (\texttt{\href{node_link}{https://nodejs.org/}}) is widely used in that regard.
+\end{itemize}
+\end{frame}
+%--------------------------------------------Slide13------------------------------------------------------------------
+\section{Online resources}
+\begin{frame}
+\frametitle{Further Reading}
+% \bibliographystyle{plain}
+% \bibliography{DevelopmentPractices.bib}
+\end{frame}
+\end{document}
